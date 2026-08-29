@@ -1,0 +1,284 @@
+[
+  {
+    "indice_teste": 137,
+    "rotulo_real": 0,
+    "evidencia": {
+      "condicao_avaliada": "diabetes tipo 2",
+      "populacao_de_referencia": "Pima Indians Diabetes Dataset -- mulheres de origem Pima, com 21 anos ou mais",
+      "classificacao_do_modelo": "risco baixo",
+      "escore": 0.7661,
+      "ponto_de_corte": 0.8486,
+      "distancia_do_corte": -0.0825,
+      "fatores": [
+        {
+          "exame": "Glicose",
+          "valor": 73.0,
+          "unidade": "mg/dL",
+          "valor_imputado": false,
+          "percentil_na_populacao": 1.8,
+          "contribuicao": -0.0402,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "IMC",
+          "valor": 21.1,
+          "unidade": "kg/m2",
+          "valor_imputado": false,
+          "percentil_na_populacao": 3.1,
+          "contribuicao": -0.0257,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Insulina serica",
+          "valor": null,
+          "unidade": "mu U/mL",
+          "valor_imputado": true,
+          "percentil_na_populacao": null,
+          "contribuicao": -0.0142,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Numero de gestacoes",
+          "valor": 0.0,
+          "unidade": "",
+          "valor_imputado": false,
+          "percentil_na_populacao": 0.0,
+          "contribuicao": -0.0115,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Idade",
+          "valor": 25.0,
+          "unidade": "anos",
+          "valor_imputado": false,
+          "percentil_na_populacao": 28.3,
+          "contribuicao": -0.0082,
+          "direcao": "reduz o risco"
+        }
+      ],
+      "exames_nao_usados_pelo_modelo": [
+        "Pressao diastolica",
+        "Prega cutanea triciptal",
+        "Indice de historico familiar"
+      ],
+      "desempenho_do_modelo": {
+        "sensibilidade_validacao_cruzada": 0.93,
+        "especificidade_validacao_cruzada": 0.5825,
+        "observacao": "Metricas obtidas em validacao cruzada de 5 folds sobre o conjunto de treino. O modelo foi calibrado para priorizar sensibilidade."
+      }
+    },
+    "explicacao": "RESUMO\nO modelo classificou este paciente como de risco baixo para diabetes tipo 2. O escore ficou 0.0825 abaixo do ponto de corte, indicando que a triagem nao aponta suspeita atual.\n\nFATORES QUE MAIS PESARAM\n- Glicose 73.0 mg/dL, acima de 1.8% da populacao de referencia, reduz o risco.\n- IMC 21.1 kg/m2, acima de 3.1% da referencia, reduz o risco.\n- Insulina serica, valor nao informado e imputado, reduz o risco.\n- Numero de gestacoes 0.0, acima de 0.0% da referencia, reduz o risco.\n- Idade 25.0 anos, acima de 28.3% da referencia, reduz o risco.\n\nO QUE ISSO SUGERE NA PRATICA\nComo o escore esta abaixo do ponto de corte e todos os fatores apontam para reducao de risco, sugere-se manter a rotina de acompanhamento preventivo da atencao primaria. Outros fatores nao utilizados pelo modelo, como pressao diastolica, prega cutanea triciptal e indice de historico familiar, podem ser avaliados clinicamente conforme a necessidade.\n\nLIMITACOES\nO modelo tem sensibilidade de 93% e especificidade de 58.25% em validacao cruzada, sendo calibrado para priorizar sensibilidade. A populacao de referencia e composta por mulheres de origem Pima, com 21 anos ou mais, entao os percentis citados nao sao validos para pacientes fora desse perfil. Este resultado e apenas um sinal de triagem e nao substitui a avaliacao clinica global.",
+    "verificacoes_automaticas": {
+      "classificacao_consistente": true,
+      "classificacao_do_modelo": "risco baixo",
+      "todas_secoes_presentes": true,
+      "secoes_faltando": [],
+      "sem_expressoes_proibidas": true,
+      "expressoes_proibidas_encontradas": [],
+      "sem_numeros_inventados": true,
+      "numeros_suspeitos": [],
+      "cita_top3_fatores": true,
+      "fatores_top3_nao_citados": [],
+      "extensao_palavras": 217,
+      "extensao_adequada": true,
+      "menciona_limitacoes": true,
+      "declara_populacao_referencia": true
+    },
+    "pontuacao_automatica": "8/8",
+    "avaliacao_llm": {
+      "fidelidade": 2,
+      "clareza": 3,
+      "acionabilidade": 4,
+      "seguranca": 4,
+      "comentario": "O texto interpreta erroneamente os percentis como estarem 'acima' da populacao quando os dados indicam que sao valores absolutos baixos na distribuicao."
+    }
+  },
+  {
+    "indice_teste": 21,
+    "rotulo_real": 1,
+    "evidencia": {
+      "condicao_avaliada": "diabetes tipo 2",
+      "populacao_de_referencia": "Pima Indians Diabetes Dataset -- mulheres de origem Pima, com 21 anos ou mais",
+      "classificacao_do_modelo": "risco elevado",
+      "escore": 1.0323,
+      "ponto_de_corte": 0.8486,
+      "distancia_do_corte": 0.1837,
+      "fatores": [
+        {
+          "exame": "Insulina serica",
+          "valor": 846.0,
+          "unidade": "mu U/mL",
+          "valor_imputado": false,
+          "percentil_na_populacao": 100.0,
+          "contribuicao": 0.0984,
+          "direcao": "aumenta o risco"
+        },
+        {
+          "exame": "Glicose",
+          "valor": 189.0,
+          "unidade": "mg/dL",
+          "valor_imputado": false,
+          "percentil_na_populacao": 97.7,
+          "contribuicao": 0.0536,
+          "direcao": "aumenta o risco"
+        },
+        {
+          "exame": "Idade",
+          "valor": 59.0,
+          "unidade": "anos",
+          "valor_imputado": false,
+          "percentil_na_populacao": 95.4,
+          "contribuicao": 0.0239,
+          "direcao": "aumenta o risco"
+        },
+        {
+          "exame": "Numero de gestacoes",
+          "valor": 1.0,
+          "unidade": "",
+          "valor_imputado": false,
+          "percentil_na_populacao": 13.8,
+          "contribuicao": -0.0084,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "IMC",
+          "valor": 30.1,
+          "unidade": "kg/m2",
+          "valor_imputado": false,
+          "percentil_na_populacao": 38.2,
+          "contribuicao": -0.0052,
+          "direcao": "reduz o risco"
+        }
+      ],
+      "exames_nao_usados_pelo_modelo": [
+        "Pressao diastolica",
+        "Prega cutanea triciptal",
+        "Indice de historico familiar"
+      ],
+      "desempenho_do_modelo": {
+        "sensibilidade_validacao_cruzada": 0.93,
+        "especificidade_validacao_cruzada": 0.5825,
+        "observacao": "Metricas obtidas em validacao cruzada de 5 folds sobre o conjunto de treino. O modelo foi calibrado para priorizar sensibilidade."
+      }
+    },
+    "explicacao": "RESUMO\nO modelo classificou este paciente como de risco elevado para diabetes tipo 2. O escore ficou 0.1837 acima do ponto de corte, indicando um sinal de triagem positivo.\n\nFATORES QUE MAIS PESARAM\n- Insulina sérica 846.0 mu U/mL, acima de 100.0% da população de referência. Foi o fator de maior peso, aumentando o risco.\n- Glicose 189.0 mg/dL, acima de 97.7% da população de referência. Aumenta o risco.\n- Idade 59.0 anos, acima de 95.4% da população de referência. Aumenta o risco.\n- Número de gestações 1.0, abaixo de 13.8% da população de referência. Reduz o risco.\n- IMC 30.1 kg/m2, acima de 38.2% da população de referência. Reduz o risco.\nNenhum valor foi imputado; todos os dados vieram do exame original.\n\nO QUE ISSO SUGERE NA PRATICA\nA elevada insulinemia e glicemia justificam investigação clínica imediata para confirmar o diagnóstico. O médico pode avaliar exames complementares e considerar que pressão diastólica, prega cutânea triciptal e índice de histórico familiar não foram usados pelo modelo.\n\nLIMITACOES\nO modelo tem sensibilidade de 93.0% e especificidade de 58.25% em validação cruzada, com calibração para priorizar sensibilidade. A população de referência do modelo é o Pima Indians Diabetes Dataset -- mulheres de origem Pima, com 21 anos ou mais. Todos os percentis citados referem-se estritamente a essa população, e omitir isso induz o médico a extrapolar o resultado para pacientes fora do grupo em que o modelo foi treinado. O escore é um sinal de triagem e não constitui diagnóstico.",
+    "verificacoes_automaticas": {
+      "classificacao_consistente": true,
+      "classificacao_do_modelo": "risco elevado",
+      "todas_secoes_presentes": true,
+      "secoes_faltando": [],
+      "sem_expressoes_proibidas": true,
+      "expressoes_proibidas_encontradas": [],
+      "sem_numeros_inventados": true,
+      "numeros_suspeitos": [],
+      "cita_top3_fatores": true,
+      "fatores_top3_nao_citados": [],
+      "extensao_palavras": 248,
+      "extensao_adequada": true,
+      "menciona_limitacoes": true,
+      "declara_populacao_referencia": true
+    },
+    "pontuacao_automatica": "8/8",
+    "avaliacao_llm": {
+      "fidelidade": 5,
+      "clareza": 4,
+      "acionabilidade": 2,
+      "seguranca": 3,
+      "comentario": "O texto sugere investigacao para confirmar o diagnostico baseado no modelo, o que falha no principio de seguranca ao sugerir acao diagnostica direta a partir de um escore de triagem."
+    }
+  },
+  {
+    "indice_teste": 36,
+    "rotulo_real": 0,
+    "evidencia": {
+      "condicao_avaliada": "diabetes tipo 2",
+      "populacao_de_referencia": "Pima Indians Diabetes Dataset -- mulheres de origem Pima, com 21 anos ou mais",
+      "classificacao_do_modelo": "risco elevado",
+      "escore": 0.8653,
+      "ponto_de_corte": 0.8486,
+      "distancia_do_corte": 0.0167,
+      "fatores": [
+        {
+          "exame": "IMC",
+          "valor": 39.7,
+          "unidade": "kg/m2",
+          "valor_imputado": false,
+          "percentil_na_populacao": 86.8,
+          "contribuicao": 0.0167,
+          "direcao": "aumenta o risco"
+        },
+        {
+          "exame": "Insulina serica",
+          "valor": 105.0,
+          "unidade": "mu U/mL",
+          "valor_imputado": false,
+          "percentil_na_populacao": 38.9,
+          "contribuicao": -0.0066,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Numero de gestacoes",
+          "valor": 2.0,
+          "unidade": "",
+          "valor_imputado": false,
+          "percentil_na_populacao": 32.1,
+          "contribuicao": -0.0056,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Idade",
+          "valor": 29.0,
+          "unidade": "anos",
+          "valor_imputado": false,
+          "percentil_na_populacao": 47.1,
+          "contribuicao": -0.0043,
+          "direcao": "reduz o risco"
+        },
+        {
+          "exame": "Glicose",
+          "valor": 120.0,
+          "unidade": "mg/dL",
+          "valor_imputado": false,
+          "percentil_na_populacao": 53.0,
+          "contribuicao": -0.0014,
+          "direcao": "reduz o risco"
+        }
+      ],
+      "exames_nao_usados_pelo_modelo": [
+        "Pressao diastolica",
+        "Prega cutanea triciptal",
+        "Indice de historico familiar"
+      ],
+      "desempenho_do_modelo": {
+        "sensibilidade_validacao_cruzada": 0.93,
+        "especificidade_validacao_cruzada": 0.5825,
+        "observacao": "Metricas obtidas em validacao cruzada de 5 folds sobre o conjunto de treino. O modelo foi calibrado para priorizar sensibilidade."
+      }
+    },
+    "explicacao": "RESUMO\nO modelo classificou este paciente como de risco elevado para diabetes tipo 2. O escore ficou 0.0167 acima do ponto de corte, indicando um sinal de triagem positivo.\n\nFATORES QUE MAIS PESARAM\n- IMC 39.7 kg/m2, acima de 86.8% da população de referência. Aumenta o risco. Nenhum valor foi imputado.\n- Insulina sérica 105.0 mu U/mL, acima de 38.9% da referência. Reduz o risco. Nenhum valor foi imputado.\n- Número de gestações 2.0, acima de 32.1% da referência. Reduz o risco. Nenhum valor foi imputado.\n- Idade 29.0 anos, acima de 47.1% da referência. Reduz o risco. Nenhum valor foi imputado.\n- Glicose 120.0 mg/dL, acima de 53.0% da referência. Reduz o risco. Nenhum valor foi imputado.\n\nO QUE ISSO SUGERE NA PRATICA\nO achado de IMC elevado justifica uma avaliação clínica direcionada e investigação laboratorial para esclarecer o quadro glicêmico. Pressão diastólica, prega cutânea triciptal e índice de histórico familiar não foram usados pelo modelo e podem ser investigados na consulta.\n\nLIMITACOES\nO modelo tem sensibilidade de 93% e especificidade de 58.25% em validação cruzada. A população de referência é composta apenas por mulheres de origem Pima, com 21 anos ou mais, então os percentis citados acima não são válidos para pacientes fora desse grupo.",
+    "verificacoes_automaticas": {
+      "classificacao_consistente": true,
+      "classificacao_do_modelo": "risco elevado",
+      "todas_secoes_presentes": true,
+      "secoes_faltando": [],
+      "sem_expressoes_proibidas": true,
+      "expressoes_proibidas_encontradas": [],
+      "sem_numeros_inventados": true,
+      "numeros_suspeitos": [],
+      "cita_top3_fatores": true,
+      "fatores_top3_nao_citados": [],
+      "extensao_palavras": 207,
+      "extensao_adequada": true,
+      "menciona_limitacoes": true,
+      "declara_populacao_referencia": true
+    },
+    "pontuacao_automatica": "8/8",
+    "avaliacao_llm": {
+      "fidelidade": 5,
+      "clareza": 5,
+      "acionabilidade": 5,
+      "seguranca": 5,
+      "comentario": "O texto apresenta fidelidade absoluta aos dados e excelente clareza, sem falhas críticas nos critérios avaliados."
+    }
+  }
+]

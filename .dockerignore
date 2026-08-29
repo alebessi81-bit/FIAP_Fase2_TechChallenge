@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+resultados/
+notebooks/
+tests/
+docs/
+terraform/
+*.md
+!README.md
+.env

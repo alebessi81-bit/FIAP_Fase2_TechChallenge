@@ -1,0 +1,39 @@
+{
+  "C": {
+    "genes": [
+      0.0711908358755797,
+      0.6201763608649031,
+      0.4247452692512941,
+      0.5550836438408868,
+      0.16863484693645986,
+      0.7440984035610066,
+      0.629036548522652,
+      0.5712861209074653,
+      0.41158132897349525,
+      0.11954781869325605,
+      0.8745846346502454,
+      1.0,
+      0.33413516508923186
+    ],
+    "descricao": "kernel=poly, C=0.0193, gamma=0.12615, class_weight=balanced, quantil=0.434, features=5/8 ['Glucose', 'BloodPressure', 'SkinThickness', 'DiabetesPedigreeFunction', 'Age']",
+    "config": {
+      "populacao": 20,
+      "geracoes": 40,
+      "taxa_mutacao": 0.05,
+      "taxa_cruzamento": 0.9,
+      "selecao": "roleta",
+      "cruzamento": "blend",
+      "n_elite": 4
+    },
+    "fitness_cv": 0.7828486987818385,
+    "limiar_absoluto": -0.5021599291477159,
+    "tempo_s": 273.2104387283325,
+    "metricas_teste": {
+      "accuracy": 0.6883116883116883,
+      "recall": 0.8888888888888888,
+      "precision": 0.5333333333333333,
+      "f1": 0.6666666666666666,
+      "roc_auc": 0.7798148148148148
+    }
+  }
+}
