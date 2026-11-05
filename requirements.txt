@@ -1,0 +1,5 @@
+pandas
+pytest
+datasets
+python-dotenv
+huggingface_hub

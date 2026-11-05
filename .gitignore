@@ -1,0 +1,80 @@
+# ==========================================
+# Credenciais e Variáveis de Ambiente (.env)
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ==========================================
+# Ambientes Virtuais (Virtual Environments)
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Caches e Bytecode do Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Ferramentas de Testes e Linters
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# Logs e Históricos de Execução
+# ==========================================
+logs/*.log
+*.log
+!logs/.gitkeep
+
+# ==========================================
+# Dados Processados e Caches de Modelos/HF
+# ==========================================
+.cache/
+data/processed/*.jsonl
+data/processed/*.json
+!data/processed/.gitkeep
+data/*.csv
+
+# ==========================================
+# IDEs e Sistema Operacional
+# ==========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
