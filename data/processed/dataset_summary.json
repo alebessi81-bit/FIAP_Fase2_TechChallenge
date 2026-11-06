@@ -1,0 +1,23 @@
+{
+  "total_curated": 26784,
+  "train": 24105,
+  "val": 2679,
+  "eval_pubmedqa_labeled": 1000,
+  "by_source": {
+    "medquad": 16122,
+    "pubmedqa": 10000,
+    "synthetic_hospital": 662
+  },
+  "by_split_and_source": {
+    "train": {
+      "medquad": 14513,
+      "pubmedqa": 8992,
+      "synthetic_hospital": 600
+    },
+    "val": {
+      "medquad": 1609,
+      "pubmedqa": 1008,
+      "synthetic_hospital": 62
+    }
+  }
+}
